@@ -1,0 +1,5 @@
+# 包
+node_modules
+
+# 开发工具选项
+.history
