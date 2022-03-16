@@ -4,7 +4,6 @@
   "description": "js工具包",
   "main": "./lib/index.ts",
   "typings": "./lib/index.d.ts",
-  "type": "module",
   "scripts": {
     "build": "rollup --c ./build/rollup.config.ts",
     "test": "jest --coverage --verbose -u"
