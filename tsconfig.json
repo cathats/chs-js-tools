@@ -5,7 +5,8 @@
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "removeComments": false,
     "declaration": true,
-    "sourceMap": false,
+    "sourceMap": true,
+    "declarationMap": true,
 
     /* 强类型检查配置 */
     "strict": true,
