@@ -1,0 +1,28 @@
+{
+  "name": "chs-js-tools",
+  "version": "1.0.0",
+  "description": "js工具包",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cathats/chs-js-tools.git"
+  },
+  "author": "cathats",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cathats/chs-js-tools/issues"
+  },
+  "homepage": "https://github.com/cathats/chs-js-tools#readme",
+  "devDependencies": {
+    "typescript": "^4.6.2"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "@typescript-eslint/parser": "^5.15.0",
+    "eslint": "^8.11.0"
+  }
+}
