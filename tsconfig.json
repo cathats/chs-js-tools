@@ -2,11 +2,7 @@
   "compilerOptions": {
     /* 基础配置 */
     "target": "ES5",
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ESNext"
-    ],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "removeComments": false,
     "declaration": true,
     "sourceMap": false,
@@ -17,13 +13,12 @@
 
     /* 模块分析配置 */
     "baseUrl": ".",
-    "outDir": "dist",
+    "outDir": "lib",
     "declarationDir": ".",
     "esModuleInterop": true,
     "moduleResolution": "node",
     "resolveJsonModule": true
   },
   "include": ["src"],
-  "exclude": ["dist"]
+  "exclude": ["lib"]
 }
-

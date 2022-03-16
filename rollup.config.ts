@@ -14,25 +14,22 @@ const paths = {
   output: path.join(__dirname, '/lib'),
 }
 
-// rollup 配置项
 const rollupConfig = {  
   input: paths.input,
   output: [
-    // 输出 commonjs 规范的代码
+    // commonJS
     {
       file: path.join(paths.output, 'index.js'),
       format: 'cjs',
       name: pkg.name,
     },
-    // 输出 es 规范的代码
+    // ES
     {
       file: path.join(paths.output, 'index.esm.js'),
       format: 'es',
       name: pkg.name,
     },
   ],
-  // external: ['lodash'], // 指出应将哪些模块视为外部模块，如 Peer dependencies 中的依赖
-  // plugins 需要注意引用顺序
   plugins: [
     // 验证导入的文件
     eslint({
