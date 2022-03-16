@@ -8,14 +8,13 @@ import { eslint } from 'rollup-plugin-eslint'
 import { DEFAULT_EXTENSIONS } from '@babel/core'
 import pkg from '../package.json'
 import dts from 'rollup-plugin-dts'
+import strip from '@rollup/plugin-strip'
 
 const dirName = __dirname.replace('/build', '')
 const paths = {
   input: path.join(dirName, '/src/index.ts'),
   output: path.join(dirName, '/lib')
 }
-
-console.log('path', paths)
 
 const rollupConfig = [
   {
@@ -35,6 +34,12 @@ const rollupConfig = [
       }
     ],
     plugins: [
+      // 删除强调语句 如: console
+      strip({
+        debugger: true,
+        functions: ['console.log', 'assert.*', 'debug', 'alert']
+      }),
+
       // 验证导入的文件
       eslint({
         throwOnError: true, // lint 结果有错误将会抛出异常
